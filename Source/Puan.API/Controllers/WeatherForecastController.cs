@@ -37,9 +37,10 @@ namespace Puan.API.Controllers
         }
 
         [HttpGet("MarcarPonto")]
-        public IEnumerable<WeatherForecast> MarcarPonto()
+        public void MarcarPonto()
         {
-            
+            Dicon dicon = new Dicon();
+            dicon.loginAsync();
         }
     }
 }
