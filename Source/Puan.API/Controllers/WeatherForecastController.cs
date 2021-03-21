@@ -40,7 +40,8 @@ namespace Puan.API.Controllers
         public void MarcarPonto()
         {
             Dicon dicon = new Dicon();
-            dicon.loginAsync();
+            //dicon.loginAsync();
+            dicon.teste();
         }
     }
 }
