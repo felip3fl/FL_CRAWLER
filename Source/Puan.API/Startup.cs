@@ -7,10 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Puan.Business.Interfaces.Adapter;
+using Puan.Business.Interfaces.Services;
+using Puan.Business.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Puan.Infra.CrawlerOncid.Adapter;
+using Puan.Infra.CrawlerOncid.Component.Interface;
+using Puan.Infra.CrawlerOncid.Component.Crawler;
 
 namespace Puan.API
 {
@@ -32,6 +37,12 @@ namespace Puan.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Puan.API", Version = "v1" });
             });
+
+            services.AddTransient<IOncidService, OncidService>();
+
+            services.AddTransient<ICrawlerOncidAdapter, CrawlerOncidAdapter>();
+
+            services.AddTransient<ICrawlerOncidConector, CrawlerOncid>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

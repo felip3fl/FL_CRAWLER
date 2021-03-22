@@ -19,8 +19,6 @@ namespace Puan.API
 
         public async Task loginAsync()
         {
-            
-
             HttpClient _httpClient = new HttpClient();
 
             //var responde = await _httpClient.GetAsync(urlOriginal);
@@ -124,7 +122,6 @@ namespace Puan.API
                 valores.Add("language", "0");
                 valores.Add("idEmployeeLogged", "0");
                 
-
                 var retorno = teste.UploadValues(url, valores);
                 HtmlDocument documento = new HtmlDocument();
                 documento.LoadHtml(Encoding.UTF8.GetString(retorno, 0, retorno.Count()));
