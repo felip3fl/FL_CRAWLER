@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Teste", "4 - Teste", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puan.Business", "Puan.Business\Puan.Business.csproj", "{13333733-251B-455E-92CE-0D1890473E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puan.Test", "Puan.Test\Puan.Test.csproj", "{66057FC5-0675-4DF1-9AEC-1A4D33091B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puan.Test", "Puan.Test\Puan.Test.csproj", "{66057FC5-0675-4DF1-9AEC-1A4D33091B91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puan.Infra.CrawlerOncid", "Puan.Infra.CrawlerOncid\Puan.Infra.CrawlerOncid.csproj", "{5534BC09-74E7-4D1A-BC31-7775171883F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{66057FC5-0675-4DF1-9AEC-1A4D33091B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66057FC5-0675-4DF1-9AEC-1A4D33091B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66057FC5-0675-4DF1-9AEC-1A4D33091B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5534BC09-74E7-4D1A-BC31-7775171883F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5534BC09-74E7-4D1A-BC31-7775171883F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5534BC09-74E7-4D1A-BC31-7775171883F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5534BC09-74E7-4D1A-BC31-7775171883F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{F2233F80-4269-494D-8E9D-3F43373FF01E} = {81C3A458-F719-42A1-82F3-B3B44D4CEE4B}
 		{13333733-251B-455E-92CE-0D1890473E53} = {97A132AE-C810-46D6-A124-C1DA5538F9E1}
 		{66057FC5-0675-4DF1-9AEC-1A4D33091B91} = {38E95CE6-3E08-4645-8F7E-C8748C424D2A}
+		{5534BC09-74E7-4D1A-BC31-7775171883F2} = {7244BD58-1817-4B1D-B254-A02D391A6188}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22755A80-1539-45F3-8653-11A64554C84A}
