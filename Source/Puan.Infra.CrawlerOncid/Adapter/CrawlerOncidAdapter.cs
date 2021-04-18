@@ -21,5 +21,11 @@ namespace Puan.Infra.CrawlerOncid.Adapter
             _crawlerOncidConector.MarkPoint();
             throw new NotImplementedException();
         }
+
+        public Task<string> MarkPoint(string nome, string senha)
+        {
+            _crawlerOncidConector.MarkPoint(nome, senha);
+            throw new NotImplementedException();
+        }
     }
 }

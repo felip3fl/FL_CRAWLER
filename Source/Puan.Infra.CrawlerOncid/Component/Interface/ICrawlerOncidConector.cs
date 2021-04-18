@@ -8,5 +8,6 @@ namespace Puan.Infra.CrawlerOncid.Component.Interface
     public interface ICrawlerOncidConector
     {
         Task<String> MarkPoint();
+        Task<String> MarkPoint(string usuario, string senha);
     }
 }

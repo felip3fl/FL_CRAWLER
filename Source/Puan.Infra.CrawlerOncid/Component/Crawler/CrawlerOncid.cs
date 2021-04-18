@@ -54,6 +54,11 @@ namespace Puan.Infra.CrawlerOncid.Component.Crawler
             }
         }
 
+        public Task<string> MarkPoint(string nome, string senha)
+        {
+            return MarkPoint();
+        }
+
         public Task<string> MarkPoint()
         {
             try

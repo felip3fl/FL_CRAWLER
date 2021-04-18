@@ -9,5 +9,6 @@ namespace Puan.Business.Interfaces.Adapter
     public interface ICrawlerOncidAdapter
     {
         Task<String> MarkPoint();
+        Task<String> MarkPoint(string nome, string senha);
     }
 }

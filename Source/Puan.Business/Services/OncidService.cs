@@ -22,5 +22,11 @@ namespace Puan.Business.Services
             _crawlerOncidService.MarkPoint();
             return null;
         }
+
+        public Task<String> MarkPoint(string usuario, string senha)
+        {
+            _crawlerOncidService.MarkPoint(usuario, senha);
+            return null;
+        }
     }
 }

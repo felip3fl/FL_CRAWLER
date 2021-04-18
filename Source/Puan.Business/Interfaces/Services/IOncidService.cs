@@ -9,5 +9,6 @@ namespace Puan.Business.Interfaces.Services
     public interface IOncidService
     {
         Task<String> MarkPoint();
+        Task<String> MarkPoint(string usuario, string senha);
     }
 }
