@@ -1,5 +1,7 @@
 ﻿using Puan.Business.Interfaces.Adapter;
+using Puan.Business.Interfaces.Repositories.Dapper;
 using Puan.Business.Interfaces.Services;
+using Puan.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +17,16 @@ namespace Puan.Business.Services
         public OncidService(ICrawlerOncidAdapter crawlerOncidService)
         {
             _crawlerOncidService = crawlerOncidService;
+            
         }
 
         public Task<String> MarkPoint()
         {
             _crawlerOncidService.MarkPoint();
+            //_pointTimeRepositoryDap.Add(new PointTime {
+            //    Mark = DateTime.Now,
+            //    Activated = true
+            //});
             return null;
         }
 

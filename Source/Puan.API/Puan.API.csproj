@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Puan.Business\Puan.Business.csproj" />
     <ProjectReference Include="..\Puan.Infra.CrawlerOncid\Puan.Infra.CrawlerOncid.csproj" />
+    <ProjectReference Include="..\Puan.Infra.Data\Puan.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

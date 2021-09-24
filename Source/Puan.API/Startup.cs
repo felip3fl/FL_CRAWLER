@@ -16,6 +16,14 @@ using System.Linq;
 using Puan.Infra.CrawlerOncid.Adapter;
 using Puan.Infra.CrawlerOncid.Component.Interface;
 using Puan.Infra.CrawlerOncid.Component.Crawler;
+using Puan.Business.Interfaces.Repositories.Dapper;
+using Puan.Infra.Data.Repositorios.Dapper.Base;
+using Puan.Infra.Data.Repositorios.Dapper;
+using Puan.Infra.Data.Interfaces.ConexaoBase;
+using Puan.Infra.Data.Repositorios.RepositorioConexao.Conexao;
+using Puan.Infra.Data.Interfaces.Context;
+using Puan.Infra.Data.Context;
+using Puan.Infra.Data.Repositorios.RepositorioConexao.Conexoes;
 
 namespace Puan.API
 {
@@ -38,11 +46,20 @@ namespace Puan.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Puan.API", Version = "v1" });
             });
 
+            services.AddTransient<Contexto>();
+            services.AddTransient<IContexto, Contexto>();
+            services.AddScoped<IFactoryConexaoBase, FactoryConexaoBase>();
+            services.AddScoped<IConexaoBase, ShadowConexaoBase>();
+
+            services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
+            services.AddScoped<IPointTimeRepositoryDap, PointTimeRepositoryDap>();
+
             services.AddTransient<IOncidService, OncidService>();
-
+            services.AddTransient<IPointTimeService, PointTimeService>();
             services.AddTransient<ICrawlerOncidAdapter, CrawlerOncidAdapter>();
-
             services.AddTransient<ICrawlerOncidConector, CrawlerOncid>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
