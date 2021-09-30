@@ -28,6 +28,7 @@ namespace Puan.API.Controllers.v1
                     Mark = DateTime.Now,
                     Activated = true
                 };
+
                 _pointTimeService.Add(oi);
                 return Ok(true);
             }
@@ -46,6 +47,34 @@ namespace Puan.API.Controllers.v1
                 return Ok(result);
             }
             catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("GetByType/{id}")]
+        public async Task<ActionResult> GetByType(int id)
+        {
+            try
+            {
+                var result = await _pointTimeService.GetByType(id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("Delete/{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            try
+            {
+                await _pointTimeService.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
             {
                 return BadRequest();
             }

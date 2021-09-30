@@ -34,7 +34,7 @@ namespace Puan.Infra.Data.Repositorios.RepositorioConexao.Conexoes
                             "Connection Timeout= 360;persist security info=true;";
 
             stringConexao += "Password=" + _senha;
-            stringConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Felipe\PuanDataBase.mdf;Integrated Security=True;Connect Timeout=30";
+            stringConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Felipe\PuanDataBase.mdf;Integrated Security=True;Connect Timeout=30"; //TODO REMOVE
             conexao = new SqlConnection(stringConexao);
 
             return conexao;

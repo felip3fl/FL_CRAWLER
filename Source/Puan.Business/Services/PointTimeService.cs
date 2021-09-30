@@ -30,6 +30,16 @@ namespace Puan.Business.Services
             }
         }
 
+        public async Task Delete(int id)
+        {
+            await _pointTimeRepositoryDap.Delete(id);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<PointTime>> GetAll()
         {
             try
@@ -40,6 +50,21 @@ namespace Puan.Business.Services
             {
                 throw;
             }
+        }
+
+        public Task<PointTime> GetById(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<PointTime>> GetByType(int id)
+        {
+            return await _pointTimeRepositoryDap.GetByType(id);
+        }
+
+        public Task<PointTime> Update(PointTime obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

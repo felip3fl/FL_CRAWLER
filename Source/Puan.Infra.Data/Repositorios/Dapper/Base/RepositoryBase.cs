@@ -18,8 +18,6 @@ namespace Puan.Infra.Data.Repositorios.Dapper.Base
             var type = typeof(T);
             var tabela = GetTableName(type);
 
-            //string where = $"WHERE {GetPrimaryKey(type)} = {id}";
-
             string query = $"SELECT * FROM {tabela}";
 
             using (var cn = _contexto.Connection())
@@ -50,22 +48,37 @@ namespace Puan.Infra.Data.Repositorios.Dapper.Base
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        public Task<T> GetById(long id)
+        public virtual async Task<T> GetById(long id)
         {
-            throw new NotImplementedException();
+            var type = typeof(T);
+            var tabela = GetTableName(type);
+
+            string where = $"WHERE {GetPrimaryKey(type)} = {id}";
+
+            string query = $"SELECT * FROM {tabela} {where}";
+
+            using (var cn = _contexto.Connection())
+            {
+                try
+                {
+                    cn.Open();
+                    var obj = await cn.QueryAsync<T>(query);
+                    cn.Close();
+                    return obj.FirstOrDefault();
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
         }
 
-        public Task<IEnumerable<T>> GetByName(string name)
+        public async virtual Task<T> Update(T obj)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> Update(T obj)
-        {
-            throw new NotImplementedException();
+            return await Task.FromResult<T>(null);
         }
 
         private static string GetTableName(Type type)

@@ -24,6 +24,8 @@ using Puan.Infra.Data.Repositorios.RepositorioConexao.Conexao;
 using Puan.Infra.Data.Interfaces.Context;
 using Puan.Infra.Data.Context;
 using Puan.Infra.Data.Repositorios.RepositorioConexao.Conexoes;
+using Puan.Infra.Data.Mapping.Config;
+using Puan.API.Configuration;
 
 namespace Puan.API
 {
@@ -59,7 +61,7 @@ namespace Puan.API
             services.AddTransient<ICrawlerOncidAdapter, CrawlerOncidAdapter>();
             services.AddTransient<ICrawlerOncidConector, CrawlerOncid>();
 
-
+            InitializeContainer(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,6 +84,12 @@ namespace Puan.API
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public void InitializeContainer(IServiceCollection services)
+        {
+            RegisterMapping.Register();
+            AutoMapperConfig.RegisterMapping(services);
         }
     }
 }
