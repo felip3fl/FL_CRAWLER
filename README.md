@@ -1,8 +1,13 @@
-<h1 align="center"> <img src="https://user-images.githubusercontent.com/20684484/212168629-795c6dd1-1205-4d20-b4b5-5c1b00ce1818.png" width="250px" align="center" ><BR><BR>Crawler<BR><BR></h1>
-
-<h4 align="center"> 
+<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/212168629-795c6dd1-1205-4d20-b4b5-5c1b00ce1818.png" width="170px" align="center" ><BR><BR>Crawler<BR></h3>
+    
+<p align="center"> 
+<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-4aadd4">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-0.0.0-4aadd4">
+    <BR><BR>
     :construction:  Projeto usado para estudo, forever em construção  :construction:
-</h4>
+<BR>
+</p>
+
 
 <BR>
 
@@ -10,10 +15,6 @@
 
 <p align="justify">
  Projeto desenvolvido usando C# com o proposito de estudo
-</p>
-<p align="center">
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-0.0.0-blue">
 </p>
 
 <BR>
@@ -41,12 +42,12 @@ Use o ``Visual Studio 2022`` para usar este projeto
   
 ## ✔️ Técnicas e tecnologias utilizadas
 <p align="justify">
-<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
-&nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg">
-&nbsp;&nbsp;<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-&nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg">
-&nbsp;&nbsp;<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
-&nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg">
+<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+&nbsp;&nbsp;<img width="80"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg">
+&nbsp;&nbsp;<img width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+&nbsp;&nbsp;<img width="80"  src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/visual-studio.svg">
+&nbsp;&nbsp;<img width="80" src="https://raw.githubusercontent.com/felip3fl/felip3fl/1a6a66b6a143aab342cf2df18f56d8c1c7e6c8fb/Material/Icon/vscode.svg">
+&nbsp;&nbsp;<img width="80"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg">
 </p>
  
 - ``ASP.NET 6``
