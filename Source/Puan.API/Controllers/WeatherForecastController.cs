@@ -28,7 +28,8 @@ namespace Puan.API.Controllers
         {
             Dicon dicon = new Dicon();
             //dicon.loginAsync();
-            dicon.teste();
+            dicon.loginAsync();
+            
         }
     }
 }
