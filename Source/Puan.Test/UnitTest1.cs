@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Puan.API;
 using Xunit.Sdk;
 
 namespace Puan.Test
@@ -9,7 +10,8 @@ namespace Puan.Test
         [TestMethod]
         public void TestMethod1()
         {
-            //Dicon dicon = new Dicon();
+            Dicon dicon = new Dicon();
+            dicon.loginAsync();
         }
     }
 }
