@@ -10,6 +10,7 @@ namespace Puan.Test
         [TestMethod]
         public void TestMethod1()
         {
+            //Fast test
             Dicon dicon = new Dicon();
             dicon.loginAsync();
         }
